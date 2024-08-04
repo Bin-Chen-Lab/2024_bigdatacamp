@@ -9,7 +9,7 @@
 module purge
 module load R/4.3.2
 
-cd /mnt/research/IPSTP_2024/Unix_and_R/ ### change to the directory where your data is located
+cd /mnt/research/IPSTP_2024/Unix_and_R/ ### change to your own directory where your data is located
 srun Rscript "day 1 - R tutorial_no_solution.R"
 scontrol show job $SLURM_JOB_ID     ### write job information to output file
 

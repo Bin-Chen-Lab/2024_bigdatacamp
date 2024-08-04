@@ -6,10 +6,15 @@
 #SBATCH --mem=100G                    # memory required per node - amount of memory (in bytes)
 #SBATCH --job-name my_unix_demo      # you can give your job a name for easier identification (same as -J)
 ########## Command Lines to Run ##########
-module purge
-module load R/4.3.2
 
-cd /mnt/research/IPSTP_2024/Unix_and_R/ ### change to your own directory where your data is located
-srun Rscript "xxx.R" ## Just an example of running a R script file. You can change this line to any other command according to your need.
-scontrol show job $SLURM_JOB_ID     ### write job information to output file
+#Change to your own directory where your data is located:
+cd /mnt/research/IPSTP_2024/Unix_and_R/ 
+
+#Just an example of running a R script file. You can change the following three lines to any other commands according to your need.
+module purge
+module load R/4.3.2  
+srun Rscript "xxx.R" 
+
+#Write job information to output file:
+scontrol show job $SLURM_JOB_ID     
 

@@ -59,6 +59,12 @@ scp <username>@hpcc.msu.edu:<HPCC_file_name> <local_folder_name>
 scp -r <username>@hpcc.msu.edu:<HPCC_folder_name> <local_folder_name> 
 
 
+#Run a R script file on HPCC:
+Rscript <R_file_name>
+#e.g., 
+Rscript "/mnt/research/IPSTP_2024/Unix_and_R/demo_Rscript_unix.R"
+
+
 #load or unload a module on HPCC:
 module purge
 module load R/4.3.2

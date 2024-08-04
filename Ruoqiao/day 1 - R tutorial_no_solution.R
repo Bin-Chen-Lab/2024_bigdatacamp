@@ -82,8 +82,8 @@ paste(cancer, age_2, sep = '')
 paste(cancer, age, sep = '')
 paste(cancer, age, sep = ',')
 tmp = strsplit(paste(cancer, age, sep = ','), ',')
-unlist(tmp, ',')[1]
-unlist(tmp, ',')[2]
+unlist(tmp)[1]
+unlist(tmp)[2]
 
 #We can't do calculations on character objects! 
 age_new = age_2 + 20

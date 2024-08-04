@@ -9,9 +9,9 @@ cd 2024_bigdatacamp/Ruoqiao
 ``` 
 To use R on HPCC, the most convenient way is to directly launch R studio via HPCC OnDemand: https://ondemand.hpcc.msu.edu/ <br />
 
-For this tutorial, we suggest:
-Number of hours: 3
-Number of cores per task: 1
+For this tutorial, we suggest: <br />
+Number of hours: 3 <br />
+Number of cores per task: 1 <br />
 Amount of memory: 10 GB
 
 

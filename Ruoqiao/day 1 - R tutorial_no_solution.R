@@ -249,9 +249,6 @@ my_function("Pancreas")
 #A simple scatter plot:
 plot(octad_cell_line_matrix[, "expression_MYC"], octad_cell_line_matrix[, "expression_MAX"])
 
-#A simple boxplot:
-boxplot(MYC_liver, MYC_breast)
-
 #Advanced: Use "ggplot2" package to refine your plots:
 #e.g., Draw a scatter plot for any two interested genes' expression:
 plot_gene_coexpression <- function(gene1, gene2){

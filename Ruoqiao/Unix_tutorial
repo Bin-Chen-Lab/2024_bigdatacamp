@@ -28,6 +28,8 @@ mkdir <folder_name>
 #delete a file or a folder (i.e., all files in the folder):
 rm <file_name>
 rm -r <folder_name>
+#sometimes you may need to force to delete:
+rm -rf <folder_name>
 
 
 #access a folder:
@@ -59,19 +61,26 @@ scp <username>@hpcc.msu.edu:<HPCC_file_name> <local_folder_name>
 scp -r <username>@hpcc.msu.edu:<HPCC_folder_name> <local_folder_name> 
 
 
+#load or unload a module on HPCC:
+module purge
+module load R/4.3.2
+
+
+#Clone (i.e., download) a github repository to HPCC:
+git clone https://github.com/Bin-Chen-Lab/2024_bigdatacamp
+cd 2024_bigdatacamp/Ruoqiao
+
+
 #Run a R script file on HPCC:
 Rscript <R_file_name>
 #e.g., 
 Rscript "/mnt/research/IPSTP_2024/Unix_and_R/demo_Rscript_unix.R"
 
 
-#load or unload a module on HPCC:
-module purge
-module load R/4.3.2
-
 #For long-running (hours) or resource-intensive jobs, to avoid interruption, you can submit a batch job script to the SLURM workload manager for scheduling and execution on the cluster. An example batch job script looks like this: https://github.com/Bin-Chen-Lab/2024_bigdatacamp/blob/main/Ruoqiao/run_script_on_unix.sb
 #Execute the batch job script on HPCC:
 sbatch run_script_on_unix.sb
+
 
 #Modify a file (e.g., batch job script) on HPCC:
 #Step 1: Open and show the contents of the batch job script:
@@ -80,7 +89,6 @@ vi run_script_on_unix.sb
 #Step 3: Use your keyboard to modify the contents of the batch job script.
 #Step 4: After you complete modification, press "Esc" on your keyboard, which change the file mode back into command mode. 
 #Step 5: Press ":" + "w" + "q" in order on your keyboard, and then press "Return / Enter". This exits the file editor.
-
 
 
 

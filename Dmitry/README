@@ -1,0 +1,3 @@
+Files for drug discovery:
+octad_whole_demo.R allows user to run a example from internal data base
+octad_side_demo.R shows how to use side dataset and some plotting functions

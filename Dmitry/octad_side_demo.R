@@ -1,5 +1,5 @@
 library('octad')
-library(ggrepel)
+library('ggrepel')
 
 df = read.csv('/Users/leshchi4/colo_data/colo_expression.csv', row.names = 1)
 df = log2(df + 1)

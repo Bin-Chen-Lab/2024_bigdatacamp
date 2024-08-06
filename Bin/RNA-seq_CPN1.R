@@ -1,4 +1,25 @@
 #download file from https://t.ly/AmDKD
+###
+#install R packages
+install.packages(c("ggplot2", "readr", "FactoMineR", "factoextra"))
+
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install(c("biomaRt", "DESeq2", "ggrepel", "clusterProfiler", "org.Hs.eg.db"))
+
+devtools::install_github("Bin-Chen-Lab/sigatlas")
+
+library(ggplot2)
+library(readr)
+library(FactoMineR)
+library(factoextra)
+library(DESeq2)
+library(ggrepel)
+library("clusterProfiler")
+library(org.Hs.eg.db)
+library("sigatlas")
+
+#########
 
 load("~/Downloads/CPN_H29.RData")
 
@@ -145,3 +166,6 @@ gseaplot(gsea_go_results, geneSetID = gsea_go_results@result$ID[1])
 dotplot(gsea_go_results)
 
 #################
+library("sigatlas")
+sigatlas(expr=tpm_data, tissue="Colon", organism="Human")
+

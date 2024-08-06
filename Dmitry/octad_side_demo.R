@@ -20,7 +20,7 @@ control_id <- rownames(ctrl)
 case <- coldata[coldata$type == 'Primary Tumor', ]
 case_id <- rownames(case)
 
-res=diffExp(case_id,control_id,source='side',output=TRUE,n_topGenes=10000,expSet=df,annotate=FALSE,DE_method == "limma")
+res=diffExp(case_id,control_id,source='side',output=TRUE,n_topGenes=10000,expSet=df,annotate=FALSE,DE_method="limma")
 
 res$gene_symbol <- rownames(res)
 res$diffexpressed <- "NO"
@@ -40,7 +40,7 @@ ggplot(data=res, aes(x=log2FoldChange, y=-log10(pvalue), col=diffexpressed, labe
   geom_vline(xintercept=c(-1, 1), col="red") +
   geom_hline(yintercept=-log10(0.05), col="red")
 
-res$Symbol <- res$gene_symbol
+res$Symbol <- res$identifier
 
 sRGES = runsRGES(res,max_gene_size=100,permutations=10000)
 

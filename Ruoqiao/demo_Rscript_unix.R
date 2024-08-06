@@ -1,0 +1,1 @@
+print("Welcome to the IPSTP bootcamp!")
